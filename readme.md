@@ -2,7 +2,9 @@
 ![](assets/hitagi.jpg)
 ## Image viewer written in c
 TODO: Zoom in and out<br>
-TODO: Multiple image formats 
+## Supports
+SDL default image formats<br>
+Gif using gifdec https://github.com/lecram/gifdec/blob/master/example.c
 ## Couldn't have been done without
 https://wiki.libsdl.org/
 
