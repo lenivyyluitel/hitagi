@@ -1,4 +1,5 @@
 #include "sdl_functions.h"
+#include <string.h>
 
 #define windowWidth 500
 #define windowHeight 500
@@ -11,11 +12,11 @@ void initSDL(SDL_Window *window)
 	}
 }
 
-SDL_Window* createWindow(SDL_Window *window, SDL_Renderer *renderer)
+SDL_Window *createWindow(SDL_Window *window, SDL_Renderer *renderer, char *file)
 {
-	window = SDL_CreateWindow("normal window", SDL_WINDOWPOS_UNDEFINED,
-				  SDL_WINDOWPOS_UNDEFINED, windowWidth, windowHeight,
-				  SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow(file, SDL_WINDOWPOS_UNDEFINED,
+				  SDL_WINDOWPOS_UNDEFINED, windowWidth,
+				  windowHeight, SDL_WINDOW_RESIZABLE);
 	if (!window) {
 		printf("Window could not be created %s\n", SDL_GetError());
 		quitSDL(window);
