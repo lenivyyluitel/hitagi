@@ -1,2 +1,4 @@
 .vscode
 hitagi
+.cache
+compile_commands.json
